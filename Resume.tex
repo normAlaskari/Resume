@@ -1,0 +1,159 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Norman Alaskari}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{normanalaskari.wixsite.com/website}
+% vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourEmail}{norman.alaskari@gmail.com}
+\newcommand{\yourPhone}{1-210-812-9431}
+\newcommand{\githubUserName}{normAlaskari}
+\newcommand{\linkedInUserName}{n-alaskari}
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+    % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+\resumeHeading{ASSET WORKS LLC}{Software Quality Assurance Analyst}{San Antonio, TX}{Feb 2020 – May 2021}
+\begin{bullets}
+    \item Tested Products, generated network diagrams, created and ran scripts in \textbf{SQL}, \textbf{Java}, and \textbf{JMX}.
+    %  \item Here is another bullet that I might choose to uncomment for some jobs   \under
+    \item Wrote and executed test cases using \textbf{JIRA} and other tools.
+    \item Learned \textbf{JMeter},an open source functional load testing tool 
+    \item Developed and execute functional performance tests against several applications
+    \item Configured and Document the environment in which the tests are run
+    \item Documented the steps required to execute the tests
+    \item Documented the results of the tests and review with Product Manager.
+\end{bullets}
+\sectionsep
+
+\resumeHeading{H-E-B Grocery Company}{Full-stack Developer Intern}{San Antonio, TX}{Jul 2020 - May 2021}
+\begin{bullets} 
+    \item Designed client-side and server-side architecture.
+    \item Developed and manage well-functioning databases and applications Write effective APIs. 
+    \underlinedLink{http://volunteer-tracker.dev.university2heb.com/}{volunteer-tracker}.
+    \item Created private cloud using \textbf{Kubernetes} that supports DEV, TEST, and PROD environments.
+    \item Built and deployed \textbf{CI/CD} pipelines.
+    \item Created a Continuous Delivery process to include support building of  \textbf{Docker} Images and publish into a private repositor.
+    \item Used \textbf{CI/CD} tools \textbf{Jenkins},\textbf{Git/Gitlabs}, \textbf{Jira} and \textbf{Docker} registry/daemon for configuration management and automation using \textbf{Ansible}.
+    \item Experience in providing highly available and fault tolerant applications utilizing orchestration technologies like \textbf{Kubernetes} and Apache Mesos on \textbf{Google Cloud Platform}.
+\end{bullets}
+\sectionsep
+
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\projectHeading{Strixhaven Rowdyhack}{https://github.com/jacksonSingleton/RowdyHacks2021}{JavaScript, React, TypeScript, HTML, CSS, Docker}
+The User opens the site and is introduced to a tutorial and tests out specific spells prompted in the middle of the screen.
+The User is then brought into a sandbox area to play around with the provided spells.
+\sectionsep
+  
+\projectHeading{
+SpaceBrawl}{https://github.com/BioCyan/SpaceBrawl}{Java, JavaFX}
+SpaceBrawl is a simple space shooter game where the players shoots asteroids to gain points while orbiting a star. It uses JavaFX for both its menus and 3D features.\\
+\sectionsep
+
+\projectHeading{Colorizing The Past Project}{https://github.com/normAlaskari/Colorize_The_past}{Python, google.colab, CNN, Big Data}
+Our group decided to use a Convolutional Neural Network (CNN) in order to color
+images. Our primary goal is to add color to old photos, photos that were taken before the invention of colored film.
+\sectionsep
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+  
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    \singleItem{Languages:}{Java, C++, Python, C\#, PHP, Bash, C, Dart (Flutter),Lisp , Flaks}
+    \\
+    \singleItem{Web Development:}{React, JavaScript, TypeScript, HTML/CSS}
+    \\
+    \singleItem{Technology:}{Git, AWS, GCP, Azure, Docker, Unity, Apache, LaTex} \\
+    {Jenkins, Kubernetes, Uinx , Vi/VIM , LaTex , Sed/Awk , Jmeter, Apache Tomcat, Selenium}
+    \\
+    \singleItem{Databases:}{SQL,NoSQL,Graph SQL, MongoDB, Postgres, DynamoDB}
+\end{skillList}
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Bash, C, SQL , NoSQL, Dart (Flutter),Lisp , Flaks}%
+%     {Databases:}{Databases:}{SQL,NoSQL,Graph SQL, MongoDB, Postgres, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+
+
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{BSc. Honours Computer Science With Software Engineering and Data science Specialization}{The University Of Texas At San Antonio}{San Antonio, TX}{May 2021}
+\\
+\educationHeading{ASc. Honours Computer Science }{Del Mar Collage}{corpus christi, TX}{December 2019}
+\sectionsep
+\end{document}
